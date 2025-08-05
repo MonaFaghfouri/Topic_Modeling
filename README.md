@@ -11,21 +11,35 @@ This repository contains multiple approaches to topic modeling applied to Persia
 | `Topic_Modeling_Graph.ipynb`    | Graph-based centrality analysis of topic keywords                             |
 | `Topic_Modeling_by_Time.ipynb`  | Temporal analysis of topic evolution across months                            |
 # 🔧 Tools & Libraries
-*Python (3.9+)
-*gensim, sklearn, nltk, matplotlib, networkx
-*transformers, sentence-transformers
-*scikit-learn, scikit-posthocs (for statistical analysis)
+Python (3.9+)
+
+gensim, sklearn, nltk, matplotlib, networkx
+
+transformers, sentence-transformers
+
+scikit-learn, scikit-posthocs (for statistical analysis)
+
 # 🎯 Objectives
-*Compare topic coherence and generalizability across methods.
-*Perform temporal and semantic analysis of topic clusters.
-*Support Persian language tokenization and visualization.
-*Evaluate performance using statistical tests (Friedman, Nemenyi, etc.)
+Compare topic coherence and generalizability across methods.
+
+Perform temporal and semantic analysis of topic clusters.
+
+Support Persian language tokenization and visualization.
+
+Evaluate performance using statistical tests (Friedman, Nemenyi, etc.)
+
 # 📊 Outputs
-*Topic clusters and top keywords for each model.
-*Graph-based centrality ranking of words.
-*Semantic similarity matrices.
-*Monthly and daily trends of topic mentions.
+Topic clusters and top keywords for each model.
+
+Graph-based centrality ranking of words.
+
+Semantic similarity matrices.
+
+Monthly and daily trends of topic mentions.
+
 # 📌 Author
-*Mona Faghfouri Azar
-*Data Analyst | NLP Researcher
-*GitHub: @MonaFaghfouri
+Mona Faghfouri Azar
+
+Data Analyst | NLP Researcher
+
+GitHub: @MonaFaghfouri
