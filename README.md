@@ -15,7 +15,6 @@ Python (3.9+)
 gensim, sklearn, nltk, matplotlib, networkx
 transformers, sentence-transformers
 scikit-learn, scikit-posthocs (for statistical analysis)
-Jalali date processing for Iranian calendar support
 # 🎯 Objectives
 Compare topic coherence and generalizability across methods.
 Perform temporal and semantic analysis of topic clusters.
