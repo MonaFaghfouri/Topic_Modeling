@@ -32,13 +32,13 @@ Support Persian language tokenization and visualization.
 Evaluate performance using statistical tests (Friedman, Nemenyi, etc.)
 
 # 📊 Outputs
-Topic clusters and top keywords for each model.
+Topic clusters and top keywords for each model
 
-Graph-based centrality ranking of words.
+Graph-based centrality ranking of words
 
-Semantic similarity matrices.
+Semantic similarity matrices between topics
 
-Monthly and daily trends of topic mentions.
+Monthly and daily trends of topic mentions
 
 # 📌 Author
 Mona Faghfouri Azar
