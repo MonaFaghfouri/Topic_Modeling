@@ -26,6 +26,6 @@ Graph-based centrality ranking of words.
 Semantic similarity matrices.
 Monthly and daily trends of topic mentions.
 # 📌 Author
-Mona Faghfouri Azar
+@Mona Faghfouri Azar
 Data Analyst | NLP Researcher
 GitHub: @MonaFaghfouri
