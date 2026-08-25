@@ -399,27 +399,5 @@ Research interests include:
 
 GitHub: [MonaFaghfouri](https://github.com/MonaFaghfouri)
 
----
 
-# 📚 Citation
 
-If you use this repository or build upon its methodology, please cite the project:
-
-```bibtex
-@software{faghfouri_persian_topic_modeling,
-  author = {Faghfouri Azar, Mona},
-  title = {Persian Social Media Topic Modeling and Semantic Network Analysis},
-  url = {https://github.com/MonaFaghfouri/Topic_Modeling},
-  year = {2026}
-}
-```
-
----
-
-<p align="center">
-  <b>⭐ If you find this project useful, consider giving the repository a star.</b>
-</p>
-
-<p align="center">
-  Built for research in NLP, AI and Computational Social Science.
-</p>
