@@ -166,7 +166,7 @@ These visualizations complement topic modeling by showing how concepts are inter
 ### 💰 Economic Discourse Network
 
 <p align="center">
-  <img src="figures/economic_semantic_network.png"
+  <img src="figures/Economic_Network_ORIGINAL_CONTENT_600dpi_600dpi_metadata.png"
        alt="Economic Semantic Network"
        width="850">
 </p>
@@ -180,7 +180,7 @@ These visualizations complement topic modeling by showing how concepts are inter
 ### 🌱 Environmental Discourse Network
 
 <p align="center">
-  <img src="figures/environmental_semantic_network.png"
+  <img src="figures/Environmental_Network_ORIGINAL_CONTENT_600dpi_600dpi_metadata.png"
        alt="Environmental Semantic Network"
        width="850">
 </p>
