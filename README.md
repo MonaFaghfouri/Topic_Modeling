@@ -5,20 +5,18 @@
 </p>
 
 <p align="center">
-  LDA • TF-IDF • Word2Vec • BERT • Clustering • Network Analysis • Temporal Modeling • Statistical Evaluation
+  LDA • TF-IDF • Word2Vec • BERT • Network Analysis • Temporal Modeling • Statistical Evaluation
 </p>
 
 ---
 
 ## 🚀 Project Overview
 
-Understanding large-scale social media conversations requires more than identifying frequently used words.
+This project presents an **end-to-end Natural Language Processing (NLP) framework for analyzing Persian social media discourse** using multiple topic-modeling and semantic-analysis techniques.
 
-This project presents an **end-to-end Natural Language Processing (NLP) pipeline for Persian social media text**, combining classical topic modeling, semantic representations, transformer-based embeddings, network analysis, temporal analysis, and statistical model comparison.
+Instead of relying on a single algorithm, the project combines classical statistical approaches, semantic embeddings, transformer-based representations, temporal analysis, network analysis, and statistical model comparison.
 
-The repository explores multiple approaches to discovering hidden thematic structures in Persian text and provides a comparative framework for evaluating how different NLP representations capture semantic patterns.
-
-Rather than relying on a single topic-modeling algorithm, the project investigates several complementary approaches:
+The implemented approaches include:
 
 * 🧩 **Latent Dirichlet Allocation (LDA)**
 * 📊 **TF-IDF-based Topic Modeling**
@@ -33,134 +31,187 @@ Rather than relying on a single topic-modeling algorithm, the project investigat
 
 ## 🎯 Research Motivation
 
-Persian social media presents several challenges for conventional NLP pipelines, including morphological variation, informal writing, sparse representations, and context-dependent semantics.
+Persian social media data presents several challenges for conventional NLP methods, including informal language, morphological variation, sparse lexical representations, and context-dependent meaning.
 
-Traditional bag-of-words approaches can identify lexical patterns but often fail to capture deeper semantic relationships.
+Traditional bag-of-words approaches are useful for identifying lexical patterns but may fail to capture deeper semantic relationships.
 
-This project therefore compares **lexical, probabilistic, embedding-based, and transformer-based representations** within a unified analytical workflow.
+This project therefore investigates **lexical, probabilistic, embedding-based, transformer-based, structural, and temporal representations** within a unified analytical workflow.
 
-The central question is:
-
-> **How effectively can different NLP representations uncover meaningful thematic and semantic structures in Persian social media discourse?**
+> **Research Question:**
+> How effectively can different NLP representations uncover meaningful thematic, semantic, and structural patterns in Persian social media discourse?
 
 ---
 
 ## 🧬 Analysis Pipeline
 
 ```text
-                    Persian Social Media Text
-                              │
-                              ▼
-                    ┌───────────────────┐
-                    │ Text Preprocessing │
-                    └─────────┬─────────┘
-                              │
-              ┌───────────────┼────────────────┐
-              │               │                │
-              ▼               ▼                ▼
-             LDA           TF-IDF          N-grams
-              │               │                │
-              └───────────────┼────────────────┘
-                              │
-                              ▼
-                     Word2Vec Embeddings
-                              │
-                              ▼
-                       BERT Embeddings
-                              │
-                              ▼
-                  Semantic Representation
-                              │
-                    ┌─────────┴─────────┐
-                    ▼                   ▼
-             Topic Discovery      Network Analysis
-                    │                   │
-                    └─────────┬─────────┘
-                              ▼
-                     Temporal Analysis
-                              │
-                              ▼
-                Statistical Model Comparison
-                              │
-                              ▼
-                    Friedman + Nemenyi
+Persian Social Media Data
+          │
+          ▼
+┌──────────────────────┐
+│   Text Preprocessing │
+└──────────┬───────────┘
+           │
+           ▼
+┌─────────────────────────────────────────┐
+│        Topic Representation             │
+│                                         │
+│   LDA  •  TF-IDF  •  N-grams           │
+└──────────────────┬──────────────────────┘
+                   │
+                   ▼
+┌─────────────────────────────────────────┐
+│        Semantic Representation          │
+│                                         │
+│       Word2Vec  •  BERT                 │
+└──────────────────┬──────────────────────┘
+                   │
+          ┌────────┴────────┐
+          ▼                 ▼
+   Topic Discovery    Network Analysis
+          │                 │
+          └────────┬────────┘
+                   ▼
+            Temporal Analysis
+                   │
+                   ▼
+        Statistical Comparison
+                   │
+                   ▼
+          Friedman + Nemenyi
 ```
 
 ---
 
 # 🔬 Methods
 
-## 1. Latent Dirichlet Allocation
+## 1️⃣ Latent Dirichlet Allocation — LDA
 
-LDA is used as a probabilistic baseline for discovering latent topics from word co-occurrence patterns.
+LDA is used as a probabilistic topic-modeling approach for discovering latent thematic structures from word co-occurrence patterns.
 
-The approach provides interpretable topic-word distributions and establishes a baseline against which more advanced semantic representations can be evaluated.
+It provides interpretable topic-word distributions and serves as an important baseline for comparison with more advanced semantic approaches.
 
-📓 `Topic_Modeling_LDA.ipynb`
-
----
-
-## 2. TF-IDF Topic Representation
-
-TF-IDF weighting is applied to emphasize discriminative terms while reducing the influence of extremely common words.
-
-This representation provides a stronger lexical baseline for identifying topic-specific vocabulary.
-
-📓 `Topic_Modeling_TF_IDF.ipynb`
+📓 **Notebook:** `Topic_Modeling_LDA.ipynb`
 
 ---
 
-## 3. N-gram Analysis
+## 2️⃣ TF-IDF Topic Representation
 
-N-gram representations capture frequently occurring multi-word expressions that cannot always be identified using isolated tokens.
+TF-IDF weighting emphasizes discriminative terms while reducing the influence of extremely common words.
 
-This is particularly useful for identifying recurring expressions, entities, and discourse patterns.
+This provides a lexical representation for identifying topic-specific vocabulary within Persian social media content.
 
-📓 `Topic_Modeling_N_gram.ipynb`
-
----
-
-## 4. Word2Vec Semantic Modeling
-
-Word2Vec embeddings are used to move beyond purely lexical representations and model semantic similarity between words in a continuous vector space.
-
-This allows related concepts to be identified even when they do not frequently appear in exactly the same lexical form.
-
-📓 `Topic_Modeling_Word2vec.ipynb`
+📓 **Notebook:** `Topic_Modeling_TF_IDF.ipynb`
 
 ---
 
-## 5. Transformer-Based Semantic Modeling
+## 3️⃣ N-gram Analysis
 
-Contextual embeddings are used to represent text based on semantic meaning rather than simple word frequency.
+N-gram analysis captures recurring multi-word expressions that may not be detected when words are analyzed independently.
 
-BERT-based representations provide a richer representation of contextual relationships and enable semantic clustering of Persian social media content.
+This approach helps identify common phrases, recurring expressions, and meaningful lexical combinations.
 
-📓 `Topic_Modeling_Bert.ipynb`
+📓 **Notebook:** `Topic_Modeling_N_gram.ipynb`
 
 ---
 
-## 🕸️ Semantic Network Analysis
+## 4️⃣ Word2Vec Semantic Modeling
 
-Topic modeling is complemented by a graph-based representation of semantic relationships.
+Word2Vec embeddings represent words in a continuous vector space, allowing semantically related concepts to be identified beyond direct lexical overlap.
 
-Terms and concepts can be represented as nodes, while their relationships form edges, allowing the analysis of:
+This provides an additional semantic layer beyond traditional frequency-based representations.
+
+📓 **Notebook:** `Topic_Modeling_Word2vec.ipynb`
+
+---
+
+## 5️⃣ BERT-Based Semantic Modeling
+
+Transformer-based contextual embeddings are used to represent text according to semantic meaning rather than word frequency alone.
+
+BERT-based representations enable richer modeling of contextual relationships within Persian social media content.
+
+📓 **Notebook:** `Topic_Modeling_Bert.ipynb`
+
+---
+
+# 🕸️ Semantic Network Analysis
+
+Topic modeling is complemented by **graph-based analysis** to examine relationships among concepts.
+
+Within the network representation, concepts can be modeled as nodes and their relationships as edges.
+
+This makes it possible to investigate:
 
 * Semantic communities
 * Highly connected concepts
-* Network structure
-* Topic relationships
-* Community formation
+* Community structures
+* Relationships among recurring themes
+* Differences in discourse organization
 
-📓 `Topic_Modeling_Graph.ipynb`
+📓 **Notebook:** `Topic_Modeling_Graph.ipynb`
 
 ---
 
-## ⏳ Temporal Topic Analysis
+# 🖼️ Visual Results
 
-Social media conversations are dynamic.
+## 🌐 Economic & Environmental Semantic Networks
 
-The temporal component of the project investigates how thematic structures change across time, making it possible to identify:
+To investigate how concepts are structurally organized within Persian social media discourse, semantic networks were constructed separately for **economic** and **environmental** discussions.
+
+These visualizations complement topic modeling by showing how concepts are interconnected and organized into larger semantic structures.
+
+---
+
+### 💰 Economic Discourse Network
+
+<p align="center">
+  <img src="figures/economic_semantic_network.png"
+       alt="Economic Semantic Network"
+       width="850">
+</p>
+
+<p align="center">
+  <i>Semantic network of economic discourse showing relationships and community structures among interconnected economic concepts.</i>
+</p>
+
+---
+
+### 🌱 Environmental Discourse Network
+
+<p align="center">
+  <img src="figures/environmental_semantic_network.png"
+       alt="Environmental Semantic Network"
+       width="850">
+</p>
+
+<p align="center">
+  <i>Semantic network of environmental discourse showing relationships and community structures among interconnected environmental concepts.</i>
+</p>
+
+---
+
+## 🔍 Economic vs. Environmental Discourse
+
+The semantic networks provide a structural perspective for comparing economic and environmental conversations.
+
+| 💰 Economic Discourse                        | 🌱 Environmental Discourse                             |
+| :------------------------------------------- | :----------------------------------------------------- |
+| More continuous discussion patterns          | More episodic discussion patterns                      |
+| Dense relationships among recurring concepts | More fragmented thematic structures                    |
+| Persistent thematic connections              | Greater concentration around specific events or issues |
+
+Together, the networks illustrate differences in the structural organization of economic and environmental discourse.
+
+> 📁 High-resolution versions of both visualizations are available in the [`figures/`](figures/) directory.
+
+---
+
+# ⏳ Temporal Topic Analysis
+
+Social media conversations evolve over time.
+
+The temporal component of this project examines how thematic structures change across different periods and enables the exploration of:
 
 * Emerging topics
 * Declining themes
@@ -168,27 +219,27 @@ The temporal component of the project investigates how thematic structures chang
 * Temporal fluctuations
 * Changes in discourse structure
 
-📓 `Topic_Modeling_by_Time.ipynb`
+📓 **Notebook:** `Topic_Modeling_by_Time.ipynb`
 
 ---
 
 # 📊 Statistical Model Comparison
 
-Simply producing different topic models does not establish whether their performance differs systematically.
+Producing several topic models does not by itself establish whether their performance differs systematically.
 
-The project therefore includes statistical comparison using:
+For this reason, the project includes statistical comparison using the **Friedman test** and **Nemenyi post-hoc analysis**.
 
 ### Friedman Test
 
-The Friedman test evaluates whether statistically significant differences exist among multiple modeling approaches.
+The Friedman test evaluates whether statistically significant differences exist among the modeling approaches being compared.
 
 ### Nemenyi Post-hoc Test
 
-When significant differences are detected, the Nemenyi procedure is used for pairwise comparison between methods.
+When differences are detected, the Nemenyi procedure enables pairwise comparison among methods.
 
-📓 `Friedman_Nemenyi.ipynb`
+📓 **Notebook:** `Friedman_Nemenyi.ipynb`
 
-This provides a statistical layer to the model-comparison process rather than relying exclusively on visual inspection.
+This adds a statistical evaluation layer to the modeling pipeline rather than relying solely on qualitative or visual comparison.
 
 ---
 
@@ -196,18 +247,18 @@ This provides a statistical layer to the model-comparison process rather than re
 
 Different NLP techniques capture different dimensions of language.
 
-| Method                | Main Strength                             |
-| --------------------- | ----------------------------------------- |
-| **LDA**               | Interpretable probabilistic topics        |
-| **TF-IDF**            | Discriminative lexical representation     |
-| **N-grams**           | Multi-word expression discovery           |
-| **Word2Vec**          | Semantic word similarity                  |
-| **BERT**              | Context-aware semantic representation     |
-| **Graph Analysis**    | Structural relationships between concepts |
-| **Temporal Analysis** | Topic evolution over time                 |
-| **Friedman/Nemenyi**  | Statistical model comparison              |
+| Method                | Primary Role                            |
+| --------------------- | --------------------------------------- |
+| **LDA**               | Probabilistic topic discovery           |
+| **TF-IDF**            | Discriminative lexical representation   |
+| **N-grams**           | Multi-word pattern discovery            |
+| **Word2Vec**          | Semantic word representation            |
+| **BERT**              | Context-aware semantic representation   |
+| **Network Analysis**  | Structural relationships among concepts |
+| **Temporal Analysis** | Evolution of discourse over time        |
+| **Friedman/Nemenyi**  | Statistical comparison                  |
 
-The objective is therefore not simply to identify a single “best” algorithm, but to examine how different representations reveal complementary dimensions of Persian social media discourse.
+The goal is therefore not simply to apply one topic-modeling algorithm, but to investigate Persian social media discourse from several complementary analytical perspectives.
 
 ---
 
@@ -217,92 +268,52 @@ The objective is therefore not simply to identify a single “best” algorithm,
 Topic_Modeling/
 │
 ├── README.md
-├── requirements.txt
-├── .gitignore
 │
 ├── Topic_Modeling_Bert.ipynb
-├── Topic_Modeling_LDA.ipynb
-├── Topic_Modeling_TF_IDF.ipynb
-├── Topic_Modeling_N_gram.ipynb
-├── Topic_Modeling_Word2vec.ipynb
 ├── Topic_Modeling_Graph.ipynb
+├── Topic_Modeling_LDA.ipynb
+├── Topic_Modeling_N_gram.ipynb
+├── Topic_Modeling_TF_IDF.ipynb
+├── Topic_Modeling_Word2vec.ipynb
 ├── Topic_Modeling_by_Time.ipynb
 ├── Friedman_Nemenyi.ipynb
 │
-├── figures/
-│   ├── bert_topic_clusters.png
-│   ├── semantic_network.png
-│   ├── topic_evolution.png
-│   └── model_comparison.png
-│
-└── results/
+└── figures/
+    ├── economic_semantic_network.png
+    └── environmental_semantic_network.png
 ```
-
----
-
-# 🖼️ Visual Results
-
-## Semantic Topic Clusters
-
-<p align="center">
-  <img src="figures/bert_topic_clusters.png" width="800">
-</p>
-
----
-
-## Semantic Network
-
-<p align="center">
-  <img src="figures/semantic_network.png" width="800">
-</p>
-
----
-
-## Topic Evolution Over Time
-
-<p align="center">
-  <img src="figures/topic_evolution.png" width="800">
-</p>
-
----
-
-## Model Comparison
-
-<p align="center">
-  <img src="figures/model_comparison.png" width="800">
-</p>
 
 ---
 
 # 🛠️ Technology Stack
 
-### Programming
+### 💻 Programming
 
 `Python` · `Jupyter Notebook`
 
-### NLP & Machine Learning
+### 🧠 NLP & Machine Learning
 
-`Transformers` · `BERT` · `Gensim` · `Scikit-learn` · `Word2Vec`
+`BERT` · `Transformers` · `Gensim` · `Scikit-learn` · `Word2Vec`
 
-### Data Processing
+### 📊 Data Processing
 
 `Pandas` · `NumPy`
 
-### Network Analysis
+### 🕸️ Network Analysis
 
 `NetworkX`
 
-### Visualization
+### 📈 Visualization
 
 `Matplotlib` · `WordCloud`
 
-### Statistical Analysis
+### 📐 Statistical Analysis
 
 `SciPy` · `Friedman Test` · `Nemenyi Post-hoc Analysis`
 
 ---
 
-# ⚙️ Installation
+# ⚙️ Getting Started
 
 Clone the repository:
 
@@ -316,88 +327,94 @@ Move into the project directory:
 cd Topic_Modeling
 ```
 
-Install the required dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Then launch Jupyter:
+Launch Jupyter Notebook:
 
 ```bash
 jupyter notebook
 ```
 
+Then open the notebook corresponding to the analysis you want to explore.
+
 ---
 
 # 🔁 Reproducibility
 
-The repository separates different analytical approaches into individual notebooks so that each method can be inspected and executed independently.
+Each analytical approach is provided in a separate Jupyter Notebook so that the methods can be inspected and executed independently.
 
-For reproducible use:
+A typical workflow consists of:
 
-1. Install the dependencies from `requirements.txt`.
-2. Prepare the input dataset according to the expected notebook structure.
-3. Run the relevant preprocessing steps.
-4. Execute the selected modeling notebook.
-5. Compare model outputs using the statistical evaluation workflow.
+1. Preparing and preprocessing the Persian text data.
+2. Selecting the desired representation or modeling approach.
+3. Executing the corresponding notebook.
+4. Inspecting topic or semantic outputs.
+5. Exploring structural and temporal patterns.
+6. Comparing modeling approaches statistically.
 
-> **Note:** The original research dataset may not be publicly distributed due to data-access, privacy, or platform-related restrictions. A sample or anonymized dataset can be provided separately when appropriate.
+> **Data Availability:** The original research dataset is not included in this public repository. The notebooks demonstrate the analytical methodology and implementation.
 
 ---
 
-# 🌍 Potential Applications
+# 🌍 Applications
 
-The framework can be adapted to several computational social science and NLP applications, including:
+The framework can be adapted for several NLP and computational social science applications:
 
 * Social media discourse analysis
+* Persian NLP
 * Public opinion analysis
-* Crisis communication research
 * Environmental discourse analysis
-* Political communication
-* Risk communication
+* Economic discourse analysis
+* Crisis and risk communication
 * Trend detection
-* Persian NLP research
+* Semantic network analysis
 * Computational social science
 
 ---
 
 # ✨ Key Contribution
 
-The main contribution of this project is the integration of **traditional topic modeling, semantic embeddings, transformer-based representations, network analysis, temporal modeling, and statistical comparison** within a single Persian NLP workflow.
+The key contribution of this project is the integration of multiple analytical perspectives within a single Persian social media NLP workflow:
 
-This enables social media discourse to be examined from multiple perspectives:
+<p align="center">
+  <b>Lexical → Probabilistic → Semantic → Structural → Temporal → Statistical</b>
+</p>
 
-**lexical → semantic → structural → temporal → statistical**
+By combining traditional topic modeling with embedding-based representations, transformer models, semantic networks, temporal analysis, and statistical evaluation, the project provides a broader framework for investigating complex Persian-language social media discourse.
 
 ---
 
 # 🚧 Future Development
 
-Future extensions may include:
+Potential extensions include:
 
-* BERTopic-based topic discovery
+* BERTopic
 * Sentence Transformer embeddings
+* Dynamic topic modeling
 * Automated hyperparameter optimization
 * Interactive topic visualization
-* Dynamic topic modeling
 * LLM-assisted topic interpretation
-* Cross-lingual topic comparison
+* Cross-lingual discourse comparison
 * Automated NLP pipelines
 
 ---
 
 # 👩‍💻 Author
 
-### Mona Faghfouri Azar
+## Mona Faghfouri Azar
 
 **Data Analyst | NLP & AI Researcher**
 
-Research interests include:
+Research interests:
 
-`Natural Language Processing` · `Artificial Intelligence` · `Computational Social Science` · `Social Media Analytics` · `Network Analysis`
+`Natural Language Processing` • `Artificial Intelligence` • `Computational Social Science` • `Social Media Analytics` • `Network Analysis`
 
 GitHub: [MonaFaghfouri](https://github.com/MonaFaghfouri)
 
+---
 
+## ⭐ Support
 
+If you find this project useful or interesting, consider giving the repository a **⭐ Star**.
+
+<p align="center">
+  <b>Built for NLP, AI & Computational Social Science Research</b>
+</p>
